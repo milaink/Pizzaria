@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mapa">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="777dp"
+        android:layout_height="576dp"
+        app:srcCompat="@drawable/mapa2"
+        tools:layout_editor_absoluteX="-152dp"
+        tools:layout_editor_absoluteY="240dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_cima"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/amarelolaranja"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/bt_retornar"
+        android:layout_width="58dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_cima"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_cima">
+
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/edit_localizacao"
+        style="@style/Edit_Text"
+        android:layout_width="359dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:drawableRight="@drawable/ic_baseline_gps_fixed_24"
+        android:focusable="auto"
+        android:hint="Usar Localização Atual"
+        android:inputType="text"
+        android:maxLength="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
+
+    <EditText
+        android:id="@+id/edit_localizacao2"
+        style="@style/Edit_Text"
+        android:layout_width="359dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:drawableRight="@drawable/ic_baseline_home_24"
+        android:focusable="auto"
+        android:hint="Casa"
+        android:inputType="text"
+        android:maxLength="25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_localizacao" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/cinza"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_cima" />
+
+    <EditText
+        android:id="@+id/editTextTextPostalAddress"
+        android:layout_width="326dp"
+        android:layout_height="38dp"
+        android:drawableRight="@drawable/ic_baseline_search_24"
+        android:ems="10"
+        android:hint="Endereço e número"
+        android:inputType="textPostalAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar4"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar4"
+        app:layout_constraintStart_toStartOf="@+id/toolbar4"
+        app:layout_constraintTop_toTopOf="@+id/toolbar4" />
+
+    <TextView
+        android:id="@+id/sacola"
+        android:layout_width="379dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawableLeft="?attr/homeAsUpIndicator"
+        android:text="ENDEREÇO DE ENTREGA"
+        android:textAlignment="center"
+        android:textColor="#FDFDFD"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_cima"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbar_cima"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_cima" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

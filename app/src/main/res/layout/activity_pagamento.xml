@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Pedido">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_cima"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/amarelolaranja"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sacola"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="40dp"
+        android:text="PAGAMENTO"
+        android:textAlignment="center"
+        android:textColor="#FDFDFD"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_cima"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbar_cima"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_cima"
+        app:drawableLeftCompat="?attr/homeAsUpIndicator" />
+
+    <View
+        android:id="@+id/containerComponents"
+        style="@style/ContainerComponents"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_cima"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/view_baixo"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="#F6F0BE"
+        app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_baixo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/laranja"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frame_pedido_continuar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/toolbar_baixo"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_baixo">
+
+        <TextView
+            android:id="@+id/continuar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="CONTINUAR"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/logo_pagamento"
+        android:layout_width="130dp"
+        android:layout_height="111dp"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_cima"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="R$ 66,00"
+        android:textColor="#070606"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/total_entrega"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/total_entrega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="2dp"
+        android:text="Total com a entrega"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar_baixo"
+        app:layout_constraintStart_toStartOf="@+id/view_baixo"
+        app:layout_constraintTop_toTopOf="@+id/view_baixo" />
+
+    <TextView
+        android:id="@+id/pague_entrega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="PAGUE NA ENTREGA"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/frame_entrega"
+        app:layout_constraintStart_toEndOf="@+id/frame_entrega"
+        app:layout_constraintTop_toTopOf="@+id/frame_entrega" />
+
+    <FrameLayout
+        android:id="@+id/frame_entrega"
+        android:layout_width="114dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/logo_pagamento">
+
+        <TextView
+            android:id="@+id/pague_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAGUE PELO APP"
+            android:textColor="@color/laranja"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_master_cred"
+        style="@style/Edit_Text"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/frame_entrega">
+
+        <TextView
+            android:id="@+id/master_c"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Mastercard - Crédito"
+            android:textAlignment="textStart"
+            android:textColor="#2B2828"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/pontos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:drawableEnd="@drawable/ic_baseline_more_vert_24" />
+
+        <ImageView
+            android:id="@+id/logo_master"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/master" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_google_pay"
+        style="@style/Edit_Cartao"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/frame_master_deb">
+
+        <TextView
+            android:id="@+id/google_pay"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Google Pay"
+            android:textAlignment="textStart"
+            android:textColor="#2B2828"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pontos2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:drawableRight="@drawable/ic_baseline_more_vert_24" />
+
+        <ImageView
+            android:id="@+id/logo_gpay"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/gpay" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_sodexo"
+        style="@style/Edit_Cartao"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/frame_google_pay">
+
+        <TextView
+            android:id="@+id/sodexo"
+            android:layout_width="186dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Sodexo  - Vale-refeição"
+            android:textAlignment="textStart"
+            android:textColor="#2B2828"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pontos3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            app:drawableRightCompat="@drawable/ic_baseline_more_vert_24" />
+
+        <ImageView
+            android:id="@+id/logo_sodexo"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/sodexo" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frame_master_deb"
+        style="@style/Edit_Cartao"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/containerComponents"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/frame_master_cred">
+
+        <TextView
+            android:id="@+id/master_d"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Mastercard - Débito"
+            android:textAlignment="textStart"
+            android:textColor="#2B2828"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pontos4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:drawableRight="@drawable/ic_baseline_more_vert_24" />
+
+        <ImageView
+            android:id="@+id/master_logo"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/master"
+            android:contentDescription="TODO" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bt_retornar"
+        android:layout_width="58dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_cima"
+        app:layout_constraintStart_toStartOf="@+id/toolbar_cima"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_cima"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>222222222222222
